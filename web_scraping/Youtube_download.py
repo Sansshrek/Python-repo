@@ -1,6 +1,8 @@
 from pytube import YouTube
 import os
 
+# This program can download youtube video to mp4 or mp3
+
 while True:
     link = str(input("Insert youtube link (0 to exit): "))
     if link == "0":
