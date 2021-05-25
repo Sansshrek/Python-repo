@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-import re
 
 # This program works only with sites that
 link = str(input("Inserire link da controllare: " ))
@@ -12,7 +11,7 @@ pos = 0
 for i in range(2, len(soupstr)):
     st = soupstr[i-2] + soupstr[i-1] + soupstr[i]
     if st == "404":
-        print("Il sito è gay")
+        print("Il sito non esiste")
         pos = i
 
 print("posizione " + str(pos) + " = "+ soupstr[pos-2] + soupstr[pos-1] + soupstr[pos])
