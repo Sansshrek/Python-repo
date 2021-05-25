@@ -1,5 +1,3 @@
-from bs4 import BeautifulSoup
-import requests
 # This program only works on this site: tv.animelove.it
 
 while True:
@@ -17,9 +15,8 @@ print("Link base: "+ link)
 file = open("link.txt", "w")
 file.write("")
 file.close()
-for i in range(episode_num):
-    linkUse = link + str(index)
-    index += 1
+for i in range(1, episode_num+1):
+    linkUse = link + str(i)
     if (choice == 1):
         file = open("link.txt", "a")
         file.write(linkUse + "\n")
