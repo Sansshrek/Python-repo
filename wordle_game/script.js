@@ -159,8 +159,8 @@ function ent(){
                 cont_row++
                 cont_letter = 0
                 if(cont_row == 6){
-                    document.getElementsByClassName("result-div")[0].style.visibility = "visible"
-                    document.getElementsByClassName("result-div")[0].style.backgroundColor = "#d63e2d"
+                    document.getElementById("result-div").style.visibility = "visible"
+                    document.getElementById("result-div").style.backgroundColor = "#d63e2d"
                     document.getElementsByClassName("result-message")[0].innerHTML = "HAI PERSO!"
                     document.getElementsByClassName("correct-answer")[0].innerHTML = "La parola giusta era "+final_word
                 }

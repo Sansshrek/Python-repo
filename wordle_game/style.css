@@ -3,10 +3,13 @@ body {
     background: #131212;
     user-select: none;
     font-family: 'Trebuchet MS', sans-serif;
+    /* display: flex; */
 }
 
 .wrapper{
     padding-top: 60px;
+    width: auto;
+    margin: auto;
 }
 
 .input-container{
@@ -14,6 +17,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: yellow;
 }
 
 .input-row{
@@ -68,9 +72,14 @@ input:focus{
     outline: none;
 }
 
+.virtual-key{
+    background-color: blue;
+    margin: auto;
+}
+
 .first-row, .second-row, .third-row{
     text-align: center;
-    height: 57px;
+    height: 50px;
     margin-bottom: 8px;
 }
 
@@ -80,13 +89,14 @@ input:focus{
     border: none;
     width: 43px;
     height: 100%;
-    margin: 0px 1px 0px;
     border-radius: 4px;
     font-weight: bold;
     color: black;
+    justify-content: center;
+    align-items: center;
 }
 
-button:active{
+.input-key:active, .input-ent:active, .input-del:active{
     position: relative;
     top: 2px;
 }
@@ -197,7 +207,21 @@ button:active{
     visibility: hidden;
 }
 
-
 table, td {
     border: 1px solid black;
-  }
+}
+
+@media (max-width: 524px){
+    .input-key, .input-ent, .input-del{
+        flex: 1;
+        display: flex;
+        margin: 0px 2px 0px;
+    }
+    .first-row,.second-row,.third-row{
+        width: auto;
+        display: flex;
+    }
+    .key-spacer{
+        flex: 0.5;
+    }
+} 
