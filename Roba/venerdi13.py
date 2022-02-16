@@ -29,7 +29,6 @@ def checkLeap(year):
 def NuovoCheck(max):
     year_max = today.year + max  #set the max of the year you want to check
     print("day {}, month {}, year {}, day of week {}, day of year {}, max year {}".format(count.day_month ,count.month ,count.year ,count.day_week ,count.day_year, year_max ))
-    input()
     print("List of every friday 13th in ", max, "year")
     for count.year in range(count.year, year_max+1):  #years
         print()
